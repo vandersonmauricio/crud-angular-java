@@ -12,7 +12,7 @@ public class Categoria implements Serializable {
     private  static final long  serialVersionUID=1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     private String nome;
     private String descricao;
 
@@ -23,7 +23,7 @@ public class Categoria implements Serializable {
         super();
     }
 
-    public Categoria(Integer id, String nome, String descricao){
+    public Categoria(Long id, String nome, String descricao){
         super();
         this.id=id;
         this.nome=nome;
@@ -43,11 +43,11 @@ public class Categoria implements Serializable {
         return Objects.hash(id);
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
